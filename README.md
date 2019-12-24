@@ -38,6 +38,7 @@ Go over Jenkins Menu and Install suggested modules and create new user
 ##### 7.1. Upload data adn configs to github project
 ##### 7.2. Configure Github Webhook
 ##### 7.3. Configure PreBuild Actions
+Run shell script:
 
     #!/bin/bash
 	echo
