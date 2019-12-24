@@ -1,7 +1,7 @@
 ### Deploy Jenkins Docker Image
 
 ##### 1. Pull Jenkins Docker image:
-    docker pull 4oh4/jenkins-docker
+    # docker pull 4oh4/jenkins-docker
 
 ##### 2. Run Jenkins Docker Instance:
 
