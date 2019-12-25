@@ -36,17 +36,16 @@ Go over Jenkins Menu and Install suggested modules and create new user
 ##### 6.2. Configure Github Webhook
 ##### 6.3. Configure PreBuild Actions
 Run shell script:
-
-    #!/bin/bash
+	#!/bin/bash
 	echo
 	echo "Create new mynginx Docker image..."
 	echo
-	docker build --rm=true --no-cache=true -t mynginx . --file=Dockerfile
+	docker build --rm --no-cache -t mynginx . --file=Dockerfile
+
 	echo
 	echo "List docker images..."
 	echo
 	docker images
-
 
 	DOCKER_INSTANCE_NAME=nginx_web
 
@@ -56,7 +55,7 @@ Run shell script:
 	  RUNNING_STATUS=$(docker inspect -f '{{.State.Running}}' $DOCKER_INSTANCE_NAME)
 	  if [ "$RUNNING_STATUS" == "true" ]; then
 		 echo "OK! NEW Docker instance was running!"
-		 exit 0
+		 #exit 0
 	  else
 		 echo "ERROR! NEW Docker instance was NOT running!"
 		 exit 1
@@ -133,3 +132,28 @@ Run shell script:
 	   
 	   
 	fi
+
+
+	echo
+	echo "List docker images..."
+	echo
+	docker images
+	echo
+	echo "Removing untagged docker images..."
+	echo
+	list_none_images=$(docker images | grep "^<none>" | awk '{print $3}')
+	echo "List NONE images for remove:"
+	echo $list_none_images
+
+	for image in $list_none_images
+	do
+	  echo "Docker Image for remove: $image"
+	  docker rmi $image
+	done
+
+	echo
+	echo "List docker images..."
+	echo
+	docker images
+	echo
+
