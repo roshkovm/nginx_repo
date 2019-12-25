@@ -14,7 +14,7 @@
       jenkins_home
 
 ##### 3. Connect to Jenkins:
-http://54.198.254.89:8080
+http://35.153.91.220:8080
 
     # cat /var/lib/docker/volumes/jenkins_home/_data/secrets/initialAdminPassword
    xxxxxxxxxxxxxxxxxxx
