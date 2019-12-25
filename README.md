@@ -156,4 +156,7 @@ Run shell script:
 	echo
 	docker images
 	echo
-
+    echo "List running docker instances..."
+	echo
+	docker ps
+	
