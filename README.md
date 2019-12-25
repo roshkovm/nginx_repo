@@ -36,6 +36,7 @@ Go over Jenkins Menu and Install suggested modules and create new user
 ##### 6.2. Configure Github Webhook
 ##### 6.3. Configure PreBuild Actions
 Run shell script:
+        
 	#!/bin/bash
 	echo
 	echo "Create new mynginx Docker image..."
