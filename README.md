@@ -14,7 +14,7 @@
       jenkins_home
 
 ##### 3. Connect to Jenkins:
-http://35.153.91.220:8080
+http://x.x.x.x:8080
 
     # cat /var/lib/docker/volumes/jenkins_home/_data/secrets/initialAdminPassword
    xxxxxxxxxxxxxxxxxxx
@@ -32,7 +32,7 @@ Go over Jenkins Menu and Install suggested modules and create new user
     # docker run -d -it -p 8080:8080 -p 50000:50000 -u 0 -v jenkins_home:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock 4oh4/jenkins-docker
 
 ##### 6. Create Jenkins FreeStyle Job
-##### 6.1. Upload data adn configs to github project
+##### 6.1. Upload data and configs to github project
 ##### 6.2. Configure Github Webhook
 ##### 6.3. Configure PreBuild Actions
 Run shell script:
